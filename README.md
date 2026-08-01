@@ -1,104 +1,39 @@
-==================================================
-Campus Management System (Console-Based PHP)
-==================================================
+# Campus Management System
 
-STUDENT NAME: KELEBOGILE
+A console-based Campus Management System built in PHP, covering parking permits, library book loans, and student performance tracking.
 
-PROJECT DESCRIPTION:
-This is a console-based Campus Management System developed in PHP. 
-It contains three main modules: Parking Permit System, Library System, 
-and Student Performance System.
+## Overview
 
---------------------------------------------------
-HOW TO RUN THE PROGRAM
---------------------------------------------------
+This project simulates three common administrative functions on a university campus, run entirely from the terminal via PHP's CLI. It was built to practice procedural PHP fundamentals: functions, arrays, input validation, and control flow, without relying on a database or web framework.
 
-1. Open XAMPP and start Apache (and my sql if required).
-2. Open Command Prompt / Terminal.
-3. Navigate to the project folder:
+## Features
 
-   cd C:\xampp\htdocs\campus_management
+- **Parking Permit Module**: apply for a permit, validate applicant details (name, age, permit type), and calculate permit pricing based on type (student/staff/visitor)
+- **Library Module**: borrow books, calculate overdue fines, and view currently borrowed books
+- **Student Performance Module**: capture student marks with validation (0–100 range), calculate averages, and classify results (Pass/Fail/Distinction)
 
-4. Run the program using:
+## Tech Stack
 
-   php index.php
+- **Language**: PHP (procedural)
+- **Interface**: Command-line, using `readline()` for input
+- **Data**: Held in memory for the session (no database)
 
-5. The main menu will appear in the terminal.
+## Getting Started
 
---------------------------------------------------
-MAIN MENU OPTIONS
---------------------------------------------------
+Requires PHP installed locally (e.g. via XAMPP).
 
-1) Parking Permit Module
-   - Apply for parking permits
-   - Validate applicant details
-   - Calculate permit price based on type
+```bash
+php index.php
+```
 
-2) Library Module
-   - Borrow books
-   - Calculate overdue fines
-   - Display borrowed books
+Follow the on-screen menu to navigate between the Parking, Library, and Student Performance modules.
 
-3) Student Performance Module
-   - Enter student marks
-   - Validate marks (0–100)
-   - Calculate average
-   - Display result (Pass/Fail/Distinction)
+## What I learned
 
-4) Exit
-   - Closes the application
+This project was a first step in structuring PHP logic into reusable functions, validating user input consistently across modules, and organizing a multi-module CLI application with a clear main menu flow.
 
---------------------------------------------------
-FEATURES USED
---------------------------------------------------
+## Possible extensions
 
-- PHP procedural programming
-- Functions for reusable logic
-- Arrays for storing data
-- Validation checks
-- Console input/output using readline()
-
---------------------------------------------------
-NOTES
---------------------------------------------------
-
-- This system runs in the terminal (not browser-based).
-- All data is stored temporarily during runtime.
-- No database is used.
-- Code is fully written and structured manually.
-
---------------------------------------------------
-DECLARATION
---------------------------------------------------
-
-I confirm that this project is my own work. 
-Any external help or references used were properly understood 
-and adapted into my own implementation.
-
-==================================================
-REFERENCES
-==================================================
-
-1. PHP Official Documentation
-   https://www.php.net/manual/en/
-
-2. W3Schools PHP Tutorial
-   https://www.w3schools.com/php/
-
-3. XAMPP Documentation (Apache Friends)
-   https://www.apachefriends.org/index.html
-
-4. Lecture Notes / Course Material
-   Assignment demo (Provided by Lecturer)
-
-5. General Programming Concepts (Functions, Arrays, Validation)
-   - Learned and applied from class exercises and practical sessions
-
-==================================================
-DECLARATION ON SOURCES USED
-==================================================
-
-Some general guidance and programming concepts were referenced from 
-educational resources listed above. All implementation and coding 
-structure has been adapted and written as part of my own understanding 
-and development of the project.
+- Persist data to a database (MySQL) instead of in-memory arrays
+- Convert to a web-based interface
+- Add authentication for different user roles (admin/staff/student)
